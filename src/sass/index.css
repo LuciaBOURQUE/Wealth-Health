@@ -1,0 +1,23 @@
+body {
+  height: 100vh;
+  position: relative;
+}
+
+.test {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 500px;
+}
+
+label {
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+input, select {
+  border: 1px solid rgba(128, 128, 128, 0.302);
+  border-radius: 5px;
+  padding: 5px;
+}/*# sourceMappingURL=index.css.map */
