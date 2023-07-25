@@ -1,0 +1,26 @@
+export const MOCK_EMPLOYEES = [
+  {
+    id: 1,
+    first_name: "Lucia",
+    last_name: "Bourque",
+    date_birthday: "24/07/1992",
+    start_date: "07/14/2021",
+    street: "41 Rue des Vénitiens",
+    city: "Limoges",
+    state: "FR",
+    zip_code: 87000,
+    department: "Sales",
+  },
+  {
+    id: 2,
+    first_name: "Corentin",
+    last_name: "Butte",
+    date_birthday: "23/03/1993",
+    start_date: "09/18/2018",
+    street: "41 Rue des Vénitiens",
+    city: "Limoges",
+    state: "FR",
+    zip_code: 87000,
+    department: "Engenring",
+  },
+]

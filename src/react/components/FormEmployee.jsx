@@ -2,6 +2,7 @@ import { states } from "../../datas/states"
 import { departments } from "../../datas/departements"
 import { useState } from "react"
 import Dropdown from "./Dropdown"
+import ModalValidation from "./ModalValidationForm"
 import "../../sass/index.scss"
 
 export default function FormEmployee() {
@@ -108,12 +109,13 @@ export default function FormEmployee() {
         data={dataDepartments}
       />
 
-      <button type="submit">Save</button>
+      <ModalValidation />
     </form>
   )
 }
 
 /*
+<button type="submit">Save</button>
 
     const state = {
     firstName: null,
