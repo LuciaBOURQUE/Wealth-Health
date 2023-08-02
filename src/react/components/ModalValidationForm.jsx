@@ -30,3 +30,12 @@ export default function ModalValidation() {
     </div>
   )
 }
+
+/*
+      <button
+        className="bg-slate-300 py-2 px-5 rounded-full mt-4"
+        onClick={onOpenModal}
+      >
+        Save
+      </button>
+*/

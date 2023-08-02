@@ -1,70 +1,82 @@
 import { states } from "../../datas/states"
 import { departments } from "../../datas/departements"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import Dropdown from "./Dropdown"
 import ModalValidation from "./ModalValidationForm"
 import "../../sass/index.scss"
 
 export default function FormEmployee() {
-  const [credentials, setCredentials] = useState({
-    firstName: "",
-    lastName: "",
-    dateBirthday: "",
-    startDate: "",
+  const dataStates = states
+  const dataDepartments = departments
+
+  const [employeesTable, setEmployeesTable] = useState([])
+  const [employee, setEmployee] = useState({
+    first_name: "",
+    last_name: "",
+    date_birthday: "",
+    start_date: "",
     street: "",
     city: "",
     state: "",
-    zipCode: "",
+    zip_code: "",
     department: "",
   })
 
   const handleChange = (e) => {
-    setCredentials({ ...credentials, [e.target.name]: e.target.value })
+    setEmployee({ ...employee, [e.target.name]: e.target.value })
     console.log(e.target.value)
   }
 
   const handleSubmit = (e) => {
     e.preventDefault()
+    let employeeObject = employee
+    setEmployeesTable([...employeesTable, employeeObject])
+    setEmployee(employee)
   }
 
-  const dataStates = states
-  const dataDepartments = departments
+  useEffect(() => {
+    localStorage.setItem("employees", JSON.stringify(employeesTable))
+  }, [employeesTable])
 
   return (
     <form onSubmit={handleSubmit} className="flex flex-col">
-      <label htmlFor="firstName">First Name</label>
+      <label htmlFor="first_name">First Name</label>
       <input
         type="text"
-        id="firstName"
-        name="firstName"
-        value={credentials.firstName}
+        id="first_name"
+        name="first_name"
+        required
+        value={employee.first_name}
         onChange={handleChange}
       />
 
-      <label htmlFor="lastName">Last Name</label>
+      <label htmlFor="last_name">Last Name</label>
       <input
         type="text"
-        id="lastName"
-        name="lastName"
-        value={credentials.lastName}
+        id="last_name"
+        name="last_name"
+        required
+        value={employee.last_name}
         onChange={handleChange}
       />
 
-      <label htmlFor="dateBirthday">Date of Birthday</label>
+      <label htmlFor="date_birthday">Date of Birthday</label>
       <input
         type="date"
-        id="dateBirthday"
-        name="dateBirthday"
-        value={credentials.dateBirthday}
+        id="date_birthday"
+        name="date_birthday"
+        required
+        value={employee.date_birthday}
         onChange={handleChange}
       />
 
-      <label htmlFor="startDate">Start Date</label>
+      <label htmlFor="start_date">Start Date</label>
       <input
         type="date"
-        id="startDate"
-        name="startDate"
-        value={credentials.startDate}
+        id="start_date"
+        name="start_date"
+        required
+        value={employee.start_date}
         onChange={handleChange}
       />
 
@@ -78,7 +90,8 @@ export default function FormEmployee() {
           type="text"
           id="street"
           name="street"
-          value={credentials.street}
+          required
+          value={employee.street}
           onChange={handleChange}
         />
 
@@ -87,18 +100,27 @@ export default function FormEmployee() {
           type="text"
           id="city"
           name="city"
-          value={credentials.city}
+          required
+          value={employee.city}
           onChange={handleChange}
         />
 
-        <Dropdown type={"state"} valueLabel={"State"} data={dataStates} />
+        <Dropdown
+          type={"state"}
+          valueLabel={"State"}
+          data={dataStates}
+          state={employee}
+          name="state"
+          handleChange={handleChange}
+        />
 
-        <label htmlFor="zipCode">Zip Code</label>
+        <label htmlFor="zip_code">Zip Code</label>
         <input
           type="text"
-          id="zipCode"
-          name="zipCode"
-          value={credentials.zipCode}
+          id="zip_code"
+          name="zip_code"
+          required
+          value={employee.zip_code}
           onChange={handleChange}
         />
       </fieldset>
@@ -107,30 +129,20 @@ export default function FormEmployee() {
         type={"department"}
         valueLabel={"Department"}
         data={dataDepartments}
+        state={employee}
+        name="department"
+        handleChange={handleChange}
       />
+
+      <button
+        type="submit"
+        className="bg-slate-300 py-2 px-5 rounded-full mt-4"
+      >
+        {" "}
+        Submit{" "}
+      </button>
 
       <ModalValidation />
     </form>
   )
 }
-
-/*
-<button type="submit">Save</button>
-
-    const state = {
-    firstName: null,
-    lastName: null,
-    dateBirthday: null,
-    startDate: null,
-    street: null,
-    city: null,
-    state: null,
-    zipCode: null,
-    department: null,
-  }
-
-  const handleChange = (e) => {
-    this.setState({ [e.target.id]: e.target.value })
-    console.log(e.target.value)
-  }
-*/

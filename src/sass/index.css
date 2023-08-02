@@ -5,7 +5,7 @@ body {
 
 .test {
   position: absolute;
-  top: 45%;
+  top: 60%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
   width: 500px;
@@ -20,4 +20,41 @@ input, select {
   border: 1px solid rgba(128, 128, 128, 0.302);
   border-radius: 5px;
   padding: 5px;
+}
+
+.customOverlay {
+  background: rgba(36, 123, 160, 0.7);
+}
+
+.customModal {
+  border-radius: 10px;
+  width: 50%;
+}
+
+table {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table td,
+table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+table tr:hover {
+  background-color: #ddd;
+}
+
+table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #04aa6d;
+  color: white;
 }/*# sourceMappingURL=index.css.map */
