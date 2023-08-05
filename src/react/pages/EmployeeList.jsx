@@ -1,18 +1,18 @@
-import { NavLink } from "react-router-dom"
-import TableEmployee from "../components/TableEmployee"
+import TableEmployee from "../components/table employee/TableEmployee"
+import logo from "../../assets/logo.png"
 import "../../sass/index.scss"
 
 export default function EmployeeList() {
   return (
-    <div className="title">
-      <h1 className="text-3xl font-bold">Current Employees</h1>
+    <div className="container-table">
+      <header className="flex justify-center items-center">
+        <img className="table_logo" src={logo} alt="Wealth Health's logo" />
+        <div>
+          <h1>Wealth Heath</h1>
+          <h2>List of all your current Employees</h2>
+        </div>
+      </header>
       <TableEmployee />
-      <NavLink
-        to="/"
-        className="flex justify-center text-1xl text-center underline"
-      >
-        Home
-      </NavLink>
     </div>
   )
 }

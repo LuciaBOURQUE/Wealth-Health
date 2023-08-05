@@ -1,23 +1,39 @@
+@import "../utils/variables";
+
 body {
     height: 100vh;
-    position: relative;
 }
 
-.test {
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    width: 500px;
+form {
+    width: 90%;
 }
 
 label {
-    font-weight: bold;
+    font-family: 'Inter', sans-serif;
+    color: $black;
+    font-size: 14px;
+    font-weight: 600;
     margin-top: 1rem;
 }
 
 input, select {
-    border: 1px solid rgba(128, 128, 128, 0.302);
+    font-family: 'Inter', sans-serif;
+    color: #868686;
+    border: 1px solid $grey2;
     border-radius: 5px;
-    padding: 5px;
+    padding: 12px 15px;
+}
+
+fieldset {
+    background-color: #F7F7F7;
+    padding: 20px;
+    legend {
+        padding-top: 20px; 
+        font-weight:600;
+    }
+}
+
+.dropdown-select {
+    display: flex;
+    flex-direction: column;
 }

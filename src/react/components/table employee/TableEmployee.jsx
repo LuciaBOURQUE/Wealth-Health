@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom"
 import { useState, useEffect, useMemo } from "react"
 import {
   useTable,
@@ -5,16 +6,15 @@ import {
   useSortBy,
   usePagination,
 } from "react-table"
-//import { MOCK_EMPLOYEES } from "../../datas/mock_employees.js"
 import { COLUMNS } from "./columns.js"
 import GlobalFilterInput from "./GlobalFilterInput.jsx"
 
-import { localStorageEmployee } from "./LocalStorage.jsx"
-import "../../sass/index.scss"
+//import { MOCK_EMPLOYEES } from "../../datas/mock_employees.js"
+import { localStorageEmployee } from "../LocalStorage.jsx"
+import "../../../sass/index.scss"
 
 export default function TableEmployee() {
-  const [employees, setEmployees] = useState([])
-  console.log(employees)
+  const [employees, setEmployees] = useState(localStorageEmployee())
 
   useEffect(() => {
     setEmployees(localStorageEmployee())
@@ -44,16 +44,16 @@ export default function TableEmployee() {
     useSortBy,
     usePagination
   )
-
   const { globleFilter, pageSize, pageIndex } = state
 
   return (
     <>
-      <section className="flex justify-between mb-4 mt-5">
+      <section className="flex justify-between items-center mb-4 mt-5">
         <div className="">
           <label htmlFor="numberList">Show {""} </label>
           <select
             type="number"
+            className="numberList"
             id="numberList"
             name="numberList"
             value={pageSize}
@@ -99,6 +99,9 @@ export default function TableEmployee() {
         </tbody>
       </table>
       <section className="flex justify-between items-center mt-4">
+        <NavLink to="/" className="main-button">
+          Return home
+        </NavLink>
         <div>
           <span>
             Showing {""}
@@ -109,16 +112,10 @@ export default function TableEmployee() {
           </span>
         </div>
         <div className="flex items-center">
-          <button
-            className="bg-slate-300 py-2 px-5 rounded-full mt-0"
-            onClick={() => previousPage()}
-          >
+          <button className="second-button" onClick={() => previousPage()}>
             Previous
           </button>
-          <button
-            className="bg-slate-300 py-2 px-5 rounded-full mt-0"
-            onClick={() => nextPage()}
-          >
+          <button className="second-button" onClick={() => nextPage()}>
             Next
           </button>
         </div>

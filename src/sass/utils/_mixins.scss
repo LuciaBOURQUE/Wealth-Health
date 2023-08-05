@@ -1,0 +1,18 @@
+@import "../utils/variables";
+
+@mixin mainbutton {
+    width: fit-content;
+    color: $white;
+    margin-top: 20px;
+    border-radius: 30px;
+    padding: 10px 25px;
+}
+
+@mixin secondbutton {
+    border: 1px solid $green;
+    width: fit-content;
+    color: $green;
+    margin-top: 20px;
+    border-radius: 30px;
+    padding: 10px 25px;
+}

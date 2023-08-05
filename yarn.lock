@@ -1986,10 +1986,10 @@
     "lz-string" "^1.5.0"
     "pretty-format" "^27.0.2"
 
-"@testing-library/jest-dom@^5.16.5":
-  "integrity" "sha512-N5ixQ2qKpi5OLYfwQmUb/5mSV9LneAcaUfp32pn4yCnpb8r/Yz0pXFPck21dIicKmi+ta5WRAknkZCfA8refMA=="
-  "resolved" "https://registry.npmjs.org/@testing-library/jest-dom/-/jest-dom-5.16.5.tgz"
-  "version" "5.16.5"
+"@testing-library/jest-dom@^5.16.5", "@testing-library/jest-dom@^5.17.0":
+  "integrity" "sha512-ynmNeT7asXyH3aSVv4vvX4Rb+0qjOhdNHnO/3vuZNqPmhDpV/+rCSGwQ7bLcmU2cJ4dvoheIO85LQj0IbJHEtg=="
+  "resolved" "https://registry.npmjs.org/@testing-library/jest-dom/-/jest-dom-5.17.0.tgz"
+  "version" "5.17.0"
   dependencies:
     "@adobe/css-tools" "^4.0.1"
     "@babel/runtime" "^7.9.2"
@@ -7914,6 +7914,21 @@
   dependencies:
     "loose-envify" "^1.1.0"
     "scheduler" "^0.23.0"
+
+"react-dropdown-ww@^1.1.2":
+  "integrity" "sha512-HwkDANsMuuQaCJ9S9SK1fPBfhMfk26jaX3H3y7C4tyt+aS3z94k9hXR03ITSMYcKIj9/Ecjb5JrIXuXFPpo9aA=="
+  "resolved" "https://registry.npmjs.org/react-dropdown-ww/-/react-dropdown-ww-1.1.2.tgz"
+  "version" "1.1.2"
+  dependencies:
+    "@babel/polyfill" "^7.12.1"
+    "@testing-library/jest-dom" "^5.17.0"
+    "@testing-library/react" "^13.4.0"
+    "@testing-library/user-event" "^13.5.0"
+    "react" "^18.2.0"
+    "react-dom" "^18.2.0"
+    "react-scripts" "5.0.1"
+    "web-vitals" "^2.1.4"
+    "win-node-env" "^0.6.1"
 
 "react-error-overlay@^6.0.11":
   "integrity" "sha512-/6UZ2qgEyH2aqzYZgQPxEnz33NJ2gNsnHA2o5+o4wW9bLM/JYQitNP9xPhsXwC08hMMovfGe/8retsdDsczPRg=="

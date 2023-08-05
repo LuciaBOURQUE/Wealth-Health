@@ -1,0 +1,24 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+
+.container-table{
+    margin: 3% 3%;
+}
+
+.main-button {
+    background-color: $green;
+    height: fit-content;
+    @include mainbutton;
+}
+.second-button {
+    background-color: transparent;
+    @include secondbutton;
+}
+
+.table_logo {
+    width: 110px;
+}
+
+.numberList {
+    padding: 5px;
+}

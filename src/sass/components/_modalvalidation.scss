@@ -1,7 +1,11 @@
 .customOverlay {
-  background: rgba(36, 123, 160, 0.7);
+  background: rgba(48, 48, 48, 0.7);
 }
 .customModal {
   border-radius: 10px;
-  width: 50%;
+  width: 30%;
+}
+
+.react-responsive-modal-closeButton {
+  top: -4px;
 }
