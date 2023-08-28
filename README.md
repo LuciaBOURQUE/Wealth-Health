@@ -11,12 +11,11 @@ This application which uses jQuery technology manages employee files however it 
 - Javascript
 - SCSS & Tailwind
 - HTML
-- React & Redux
+- React
 
 ## Prerequisites
 
 - **React** (version 18.2.0)
-- **Redux** (version 4.2.1)
 
 ## Start project
 
