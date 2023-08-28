@@ -1,3 +1,8 @@
+/**
+ * Search fields in the global table
+ * @param {string|number} param0
+ * @returns the user value
+ */
 const GlobalFilterInput = ({ filter, setFilter }) => {
   return (
     <span>
@@ -5,8 +10,8 @@ const GlobalFilterInput = ({ filter, setFilter }) => {
       <input
         placeholder="Enter your search"
         type="text"
-        id="first_name"
-        name="first_name"
+        id="search"
+        name="search"
         value={filter}
         onChange={(e) => setFilter(e.target.value)}
       />

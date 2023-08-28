@@ -2,20 +2,18 @@ import { useEffect, useState } from "react"
 import { states } from "../../datas/states"
 import { departments } from "../../datas/departements"
 import { Dropdown } from "react-dropdown-ww"
-//import ModalValidation from "./ModalValidationForm"
+
 import { Modal } from "react-responsive-modal"
 import "react-responsive-modal/styles.css"
 import { localStorageEmployee } from "./LocalStorage.jsx"
 import "../../sass/index.scss"
 
 export default function FormEmployee() {
-  //Data of states and departments
   const dataStates = states
   let optionsStates = dataStates.map((state) => state.name)
   const dataDepartments = departments
   let optionsDepartments = dataDepartments.map((department) => department.name)
 
-  // State of modal validation
   const [open, setOpen] = useState(false)
   const onOpenModal = () => setOpen(true)
   const onCloseModal = () => setOpen(false)

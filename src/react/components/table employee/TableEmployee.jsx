@@ -13,6 +13,10 @@ import GlobalFilterInput from "./GlobalFilterInput.jsx"
 import { localStorageEmployee } from "../LocalStorage.jsx"
 import "../../../sass/index.scss"
 
+/**
+ * Component that displays a table of the list of employees
+ * @returns
+ */
 export default function TableEmployee() {
   const [employees, setEmployees] = useState(localStorageEmployee())
 

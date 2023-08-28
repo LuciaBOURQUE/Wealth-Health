@@ -1,9 +1,13 @@
 import { NavLink } from "react-router-dom"
 import FormEmployee from "../components/FormEmployee"
 import logo from "../../assets/logo.png"
-import image from "../../assets/image.png"
+import image from "../../assets/image.avif"
 import "../../sass/index.scss"
 
+/**
+ * Component that displays the page of the HR's form
+ * @returns the form's page
+ */
 export default function CreateEmployee() {
   return (
     <div className="container-form">
