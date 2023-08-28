@@ -15,7 +15,7 @@ import "../../../sass/index.scss"
 
 /**
  * Component that displays a table of the list of employees
- * @returns
+ * @returns the employee's table
  */
 export default function TableEmployee() {
   const [employees, setEmployees] = useState(localStorageEmployee())

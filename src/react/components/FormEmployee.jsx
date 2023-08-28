@@ -8,6 +8,10 @@ import "react-responsive-modal/styles.css"
 import { localStorageEmployee } from "./LocalStorage.jsx"
 import "../../sass/index.scss"
 
+/**
+ * Component that displays the HR's form
+ * @returns the HR's form
+ */
 export default function FormEmployee() {
   const dataStates = states
   let optionsStates = dataStates.map((state) => state.name)
