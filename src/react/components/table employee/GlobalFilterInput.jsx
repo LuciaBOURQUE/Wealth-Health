@@ -1,5 +1,5 @@
 /**
- * Search fields in the global table
+ * Display of search fields in the global table
  * @param {string|number} param0
  * @returns the user value
  */

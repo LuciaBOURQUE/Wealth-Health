@@ -35,6 +35,7 @@ export default function TableEmployee() {
     nextPage,
     previousPage,
     pageOptions,
+    gotoPage,
     prepareRow,
     setPageSize,
     state,
@@ -119,6 +120,19 @@ export default function TableEmployee() {
           <button className="second-button" onClick={() => previousPage()}>
             Previous
           </button>
+          <div className="number-page">
+            {pageOptions.map((number, index) => (
+              <span
+                key={`${number}-${index}`}
+                className="number-page_list"
+                onClick={() => {
+                  gotoPage(number)
+                }}
+              >
+                {number + 1}
+              </span>
+            ))}
+          </div>
           <button className="second-button" onClick={() => nextPage()}>
             Next
           </button>
@@ -127,3 +141,16 @@ export default function TableEmployee() {
     </>
   )
 }
+
+/*
+            <input
+              type="number"
+              defaultValue={pageIndex + 1}
+              onChange={(e) => {
+                const pageNumber = e.target.value
+                  ? Number(e.target.value) - 1
+                  : 0
+                gotoPage(pageNumber)
+              }}
+            />
+*/

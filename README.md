@@ -1,6 +1,3 @@
-![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)
-![forthebadge](https://forthebadge.com/images/badges/uses-html.svg)
-
 # SportSee - Analytics Dashboard
 
 WealthHealth is a large financial company that is having issues with their internal web application.  
@@ -20,7 +17,7 @@ This application which uses jQuery technology manages employee files however it 
 ## Start project
 
 - Clone this repository with this command : **`git clone https://github.com/LuciaBOURQUE/HR-OCR.git`**
-- Open a new terminal on this file, **`yarn install`** then run the command **`yarn start`** it will allow you to run the application on http://localhost:3000
+- Open a new terminal on this file, **`yarn install`** to install dependencies and then run the command **`yarn start`** it will allow you to run the application on http://localhost:3000
 
 ## Author
 

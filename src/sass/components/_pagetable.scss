@@ -22,3 +22,18 @@
 .numberList {
     padding: 5px;
 }
+
+.number-page {
+    margin-top: 20px;
+    &_list {
+        cursor: pointer;
+        padding: 5px 10px;
+        margin: 5px;
+        border-radius: 5px;
+    }
+}
+
+.number-page_list:hover {
+    background-color: $green;
+    color: white;
+}
