@@ -124,7 +124,7 @@ export default function TableEmployee() {
             {pageOptions.map((number, index) => (
               <span
                 key={`${number}-${index}`}
-                className="number-page_list"
+                className="number-page_list active"
                 onClick={() => {
                   gotoPage(number)
                 }}
@@ -141,16 +141,3 @@ export default function TableEmployee() {
     </>
   )
 }
-
-/*
-            <input
-              type="number"
-              defaultValue={pageIndex + 1}
-              onChange={(e) => {
-                const pageNumber = e.target.value
-                  ? Number(e.target.value) - 1
-                  : 0
-                gotoPage(pageNumber)
-              }}
-            />
-*/

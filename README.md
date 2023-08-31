@@ -1,11 +1,13 @@
-# SportSee - Analytics Dashboard
+# Wealth Health
+
+14's project of Openclassrooms
 
 WealthHealth is a large financial company that is having issues with their internal web application.  
 This application which uses jQuery technology manages employee files however it is obsolete and it is difficult to maintain the code. It is then necessary to update it by converting the entire project to React in order to gain performance and stability.
 
 ## Technologies
 
-- Javascript
+- JavaScript
 - SCSS & Tailwind
 - HTML
 - React
@@ -13,6 +15,7 @@ This application which uses jQuery technology manages employee files however it 
 ## Prerequisites
 
 - **React** (version 18.2.0)
+- **Node.js** (v19.1.0)
 
 ## Start project
 
